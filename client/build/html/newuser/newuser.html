@@ -1,0 +1,56 @@
+
+
+<form ng-submit='createuser(user)' role="form">
+	<h1>Publica tu anuncio completamente gratis</h1>
+
+	<div class="form-group">
+		<label for="paterno">Nombre</label>
+		<input required type="text" class="form-control"  ng-model='user.name'  id="paterno">
+	</div>
+
+
+	<div class="form-group">
+		<label for="materno">Telefono</label>
+		<input required type="text" class="form-control"  ng-model='user.phone' id="materno" >
+	</div>
+
+	<div class="form-group">
+		<label for="distrito">Distrito</label>
+		
+
+		<select class='form-control' required ng-options="item as item.name for item in distritos track by item.id" ng-model="user.distrito"></select><option></option></select>
+	</div>
+
+	<!--<div class="form-group">
+		<label for="nacimiento">Direccion</label>
+		<input required type="text" class="form-control"  ng-model='user.direccion' id="nacimiento" >
+	</div>-->
+
+
+	<div class="form-group">
+		<label for="nacimiento">Descripcion</label>
+		<textarea rows="6" required type="text" class="form-control"  ng-model='user.descripcion' id="nacimiento" ></textarea>
+	</div>
+
+
+
+	<div class="form-group">
+		<label for="nacimiento">Photo</label>
+
+		<img width="100%" ng-src="{{image_source}}" class='img-responsive'>
+
+	
+		<input name='photo' onchange="angular.element(this).scope().setFile(this)" accept="image/*" type = "file" file-model = "myFile"/>
+
+	</div>
+
+		<div class="form-group">
+		<label for="nacimiento">Precio</label>
+		<input required type="number" class="form-control"  ng-model='user.precio' id="nacimiento" >
+	</div>
+
+	
+	<button type="submit" class="btn btn-primary btn-lg">Publicar</button>
+	
+</form>
+

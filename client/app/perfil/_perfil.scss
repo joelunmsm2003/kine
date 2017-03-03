@@ -1,0 +1,25 @@
+.perfil{
+
+	padding-top: 77px;
+
+}
+
+.detalleperfil{
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    
+    background-color: #ff2069;
+
+    .flex-item {
+	    background-color: #ff2069;
+	    width: 20%;
+	    color:#fff;
+	    
+	   
+	}
+	.flex-item-1{
+		width: 80%
+	}
+}
+

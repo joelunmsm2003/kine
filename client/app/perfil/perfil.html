@@ -1,0 +1,138 @@
+<headercomponent></headercomponent>
+
+
+
+
+<div class="container perfil">
+
+  <h2>Bienvenido, {{perfil.username}}</h2>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home">Mis Anuncios</a></li>
+    <li><a data-toggle="tab" href="#menu1">Mi Perfil</a></li>
+   
+  </ul>
+
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      
+
+          <!--Kines-->
+
+      <div style="margin-top: -50px;">
+
+      <div ng-repeat="item in kines | filter: greaterThan('precio',min,max) as filtered" >
+
+      <div class="flex-container">
+        <div class="photo">
+
+
+        <img ng-if='item.photo' src='{{host}}{{item.photo}}'  class='img-responsive'>
+
+        <img ng-if='!item.photo' ng-click='reload()' src='http://educationportal.uk.gov.in:8080/images/ajax-loader.gif'  class='img-responsive'/>
+
+
+
+        </div>
+        <div class="descripcion">
+
+            
+
+            <div class='texto'>
+
+                <div class='row'>
+
+                <h2>{{item.name}}</h2>
+
+                </div>
+
+
+                <div class='row'>
+
+                  <div class='col-md-4'>
+
+                  <img src='img/smartphone.svg'  width="50px"><p> {{item.phone}}</p>
+
+                  </div>
+
+                  <div class='col-md-4'>
+
+                  <img src='img/place-localizer.svg'  width="50px"> <p>{{item.distrito__name}}</p>
+
+                  </div>
+
+                  <div class='col-md-4'>
+
+                  <img src='img/banknote.svg'  width="50px"><p> {{item.precio}}</p>
+
+                  </div>
+
+                </div>
+            </div>
+
+            <div class='efecto'>
+
+
+            {{item.description }}
+
+
+            </div>
+
+          
+          
+
+
+
+
+        </div>
+
+      </div>
+
+      </div>
+
+  </div>
+
+
+    </div>
+    <div id="menu1" class="tab-pane fade">
+      <h3>Perfil</h3>
+
+
+
+            <div class="detalleperfil">
+              <div class="flex-item"><img src='http://jsequeiros.com/sites/default/files/imagen-cachorro-comprimir.jpg?1399003306' class='img-responsive'></div>
+              <div class="flex-item-1">
+                  
+                  <div style="padding: 26px;" class='col-md-4 col-md-offset-0'>
+
+                    
+                    <label style="color: #fff;">Nombre</label>
+
+                    <input type="" class='form-control' ng-model='perfil.first_name' name="">
+                     
+                    <br>
+                    <label style="color: #fff;">Phone</label>
+
+                    <input type="" class='form-control' ng-model='perfil.phone' name=""> 
+
+                    
+                    
+
+                  </div>
+
+              </div>
+               
+            </div>
+                  
+    </div>
+    <div id="menu2" class="tab-pane fade">
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+      <h3>Menu 3</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+</div>
+

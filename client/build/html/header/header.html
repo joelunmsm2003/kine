@@ -1,0 +1,63 @@
+
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+         <!--  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" >
+            <span class="sr-only" >Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button> -->
+          <a class="navbar-brand"  href='/'>Kine</a>
+          <a class="navbar-brand"  ng-click="$ctrl.sidebar()">Buscar</a>
+          <div
+      style='    
+      padding-right: 19px;
+      padding-top: 19px;'
+
+
+      ><a class='btn btn-primary ' href='/anuncio'>Publica tu anuncio gratis </a></div>
+           
+        </div>
+    <ul class="nav navbar-nav">
+    
+      <li class='active' ng-if='!token'><a href='' data-toggle="modal" data-target="#myModal">Ingresar</a></li>
+      <li ng-if='token'><a ng-click='salir()'>Salir</a></li>
+      <li ><a href='/perfil' >{{perfil.username}}</a></li>
+
+      
+
+
+  
+    </ul>
+
+
+
+      
+  </div>
+</nav>
+
+
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title">Ingresar</h3>
+      </div>
+      <div class="modal-body">
+      
+		<ingresarcomponent></ingresarcomponent>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

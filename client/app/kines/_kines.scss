@@ -1,0 +1,295 @@
+
+// Sidebar fixed
+
+div#sidebarfijo{
+   position:fixed;
+   height:100%;
+   width:350px; 
+   left:0;
+   background:#56dce7;
+   z-index: 100; 
+   top: 70px;
+}
+
+
+.kines{
+
+	padding: 28px;
+
+}
+
+
+
+// Navegacion de Ayuda en circulos
+
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+		.flex-container {
+			    display: -webkit-flex;
+			    display: flex;
+			    width: 100%;
+			    height: auto;
+			    
+			    background-color: #ff2069;
+			    
+
+		}
+
+		.photo {
+		    background-color: #fff;
+		    width: 40%;
+		    border: 1px solid #ffffff;
+		}
+
+		.iconosdetalle{
+
+			padding: 20px;
+
+			p{
+				margin: 10px 0 10px;
+
+			}
+
+			
+		}
+
+		.descripcion {
+		  
+		  	position: relative;
+		    color: #1b1b1b;
+		    width: 60%;
+		    border: 1px solid #ffffff;
+
+		    .texto{
+
+					    
+					    color: #fff;
+					    
+					    text-align: center;
+				
+
+		    }
+
+
+		    .efecto{
+
+		    	        position: absolute;
+					  
+					    top: 11px;
+					    right: 0;
+					    left: 0;
+					    bottom: 0;
+					    opacity: 0;
+					    
+					    transition: opacity .6s;
+					    font-family: 'Archivo Black';
+					    
+
+					    img{
+
+					    	width: 30px;
+					    }
+
+					      .col-md-6{
+
+					    	    padding-top: 6px;
+					    }
+					    
+					   
+		    }
+		}
+
+		.descripcion:hover {
+		  
+			background: #f9c148;
+
+			.texto{
+
+				opacity: .2;
+				transition: opacity .6s;
+			}
+
+			.efecto{
+
+				opacity: 4;
+				transition: opacity .6s;
+				color:#fff;
+				    font-size: 15px;
+
+			}
+
+
+
+
+		}
+
+
+
+		.anuncio{
+
+			text-align: right;
+			margin-bottom: 17px;
+		}
+
+		.fa-heart{
+
+			    color: #ff2069;
+			    transition: font-size .6s;
+		}
+
+		.btn-primary:hover{
+
+			.fa-heart{
+
+			    color: #ff2069;
+			    font-size: 16px;
+			    transition: font-size .6s;
+			}
+
+		}
+		.resultados{
+
+			margin-top: 76px;
+
+			span{
+
+
+			    font-size: 21px;
+			    color: #fff;
+			}
+
+
+		}
+
+
+	
+
+
+	.nav{
+
+		   display: none;
+	}
+ 
+
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+
+
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+
+.descripcion {
+		  
+		  	position: relative;
+		    color: #1b1b1b;
+		    width: 70%;
+
+		    .texto{
+
+		    	    padding: 1em;
+		    }
+
+
+		    .efecto{
+
+		    	        position: absolute;
+					  
+					    top: 0;
+					    right: 0;
+					    left: 0;
+					    bottom: 0;
+					    opacity: 0;
+					    padding: 1em;
+					    transition: opacity .6s;
+					  
+						font-family: Galano;
+					    font-size: 17px;
+					  
+
+					    img{
+
+					    	width: 40px;
+					    }
+
+					    .col-md-4{
+					    	padding: 21px;
+					    }
+		    
+		    }
+
+
+		}
+
+			.affix {
+				position: fixed;
+				width: 23%;
+				padding: 27px;
+				background: #f9c148;
+				padding: 3em;
+
+			}
+
+			.resultados{
+
+				.affix{
+
+					margin-top: 0;
+
+				}
+			}
+
+			.distrito{
+
+				display: block;
+			}
+
+				.nav{
+
+		   display: block;
+	}
+
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+.affix {
+    position: fixed;
+    width: 31%;
+    padding: 27px;
+    background: #f9c148;
+    padding: 2em;
+    margin-top: 0px;
+}
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+.affix {
+    position: fixed;
+    width: 20%;
+    padding: 27px;
+    background: #f9c148;
+    padding: 2em;
+    margin-top: 0px;
+}
+
+
+
+}
+
+
