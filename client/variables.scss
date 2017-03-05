@@ -19,7 +19,7 @@ $brand-primary:         #ff2069 !default; // #337ab7
 $brand-success:         #1b1b1b !default;
 $brand-info:            #fa4a33 !default;
 $brand-warning:         #f0ad4e !default;
-$brand-danger:          #d9534f !default;
+$brand-danger:          #ff2069 !default;
 
 
 //== Scaffolding
@@ -457,7 +457,7 @@ $navbar-inverse-link-disabled-color:        #444 !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
 
 // Inverted navbar brand label
-$navbar-inverse-brand-color:                $navbar-inverse-link-color !default;
+$navbar-inverse-brand-color:                #fff !default;
 $navbar-inverse-brand-hover-color:          #fff !default;
 $navbar-inverse-brand-hover-bg:             transparent !default;
 
@@ -561,8 +561,8 @@ $state-warning-text:             #8a6d3b !default;
 $state-warning-bg:               #fcf8e3 !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
+$state-danger-text:              #fff !default;
+$state-danger-bg:                #ff2069 !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 

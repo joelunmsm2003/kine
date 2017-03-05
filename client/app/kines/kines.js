@@ -10,7 +10,33 @@ angular
 
 
 
-function KinesController($scope,KineService,$filter){
+function KinesController($location,$scope,KineService,UserService,$filter,$localStorage){
+
+
+
+    if($localStorage.token){
+
+    console.log('TOKEN',$localStorage.token)
+
+    $scope.token = $localStorage.token
+
+
+
+    UserService.perfil().then(function(data) {
+
+           $scope.perfil = data[0]
+        
+    })
+
+  }
+
+  $scope.salir = function () {
+
+      UserService.salir()
+      $location.path('/home')
+
+    }
+
 
   $scope.dist=true
 

@@ -7,16 +7,16 @@ angular
 
 
 
-function HomeController($scope,UserService){
+function HomeController($scope,UserService,$localStorage){
 
 
 $scope.estado = true
 
 	$scope.side = function() {
 
-		$('#sidebarfijo').removeClass('animated slideInLeft')
+		$('#sidebarfijo').removeClass('animated fadeInLeft')
 
-		$('#sidebarfijo').removeClass('animated slideOutLeft')
+		$('#sidebarfijo').removeClass('animated fadeOutLeft')
 
 		
 
@@ -26,17 +26,20 @@ $scope.estado = true
 
 			$scope.estado = false
 
-			$('#sidebarfijo').addClass('animated slideInLeft');
+			$('#sidebarfijo').addClass('animated fadeInLeft');
 		}
 		else{
 
 			$scope.estado = true
 
-			$('#sidebarfijo').addClass('animated slideOutLeft');
+			$('#sidebarfijo').addClass('animated fadeOutLeft');
 
 		}
 
 	};
+
+
+
 
 
 

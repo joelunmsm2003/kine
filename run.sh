@@ -3,9 +3,9 @@ killall -9 node
 cd apis
 python manage.py runserver 0.0.0.0:8000&
 
-cd server
+cd ../server
 npm start&
 
-cd client
+cd ../client
 gulp watch&
 

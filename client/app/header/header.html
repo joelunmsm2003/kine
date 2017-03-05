@@ -9,19 +9,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button> -->
-          <a class="navbar-brand"  href='/'>Kine</a>
-          <a class="navbar-brand"  ng-click="$ctrl.sidebar()">Buscar</a>
-          <div
-      style='    
-      padding-right: 19px;
-      padding-top: 19px;'
-
-
-      ><a class='btn btn-primary ' href='/anuncio'>Publica tu anuncio gratis </a></div>
+        
+          <a class="navbar-brand " ng-click="$ctrl.sidebar()" href='/' ng-click='menu()'><img class='menu' src='img/menu.svg'></a>
+          <a class="navbar-brand logo"  href='/'>LimaSex</a>
+          
+          
            
         </div>
     <ul class="nav navbar-nav">
+
+
+
     
+      <li><a  href='/anuncio'>  Publica tu anuncio gratis </a></li>
       <li class='active' ng-if='!token'><a href='' data-toggle="modal" data-target="#myModal">Ingresar</a></li>
       <li ng-if='token'><a ng-click='salir()'>Salir</a></li>
       <li ><a href='/perfil' >{{perfil.username}}</a></li>

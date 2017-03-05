@@ -508,16 +508,16 @@ angular
 
 
 
-function HomeController($scope,UserService){
+function HomeController($scope,UserService,$localStorage){
 
 
 $scope.estado = true
 
 	$scope.side = function() {
 
-		$('#sidebarfijo').removeClass('animated slideInLeft')
+		$('#sidebarfijo').removeClass('animated fadeInLeft')
 
-		$('#sidebarfijo').removeClass('animated slideOutLeft')
+		$('#sidebarfijo').removeClass('animated fadeOutLeft')
 
 		
 
@@ -527,17 +527,20 @@ $scope.estado = true
 
 			$scope.estado = false
 
-			$('#sidebarfijo').addClass('animated slideInLeft');
+			$('#sidebarfijo').addClass('animated fadeInLeft');
 		}
 		else{
 
 			$scope.estado = true
 
-			$('#sidebarfijo').addClass('animated slideOutLeft');
+			$('#sidebarfijo').addClass('animated fadeOutLeft');
 
 		}
 
 	};
+
+
+
 
 
 
@@ -582,7 +585,33 @@ angular
 
 
 
-function KinesController($scope,KineService,$filter){
+function KinesController($location,$scope,KineService,UserService,$filter,$localStorage){
+
+
+
+    if($localStorage.token){
+
+    console.log('TOKEN',$localStorage.token)
+
+    $scope.token = $localStorage.token
+
+
+
+    UserService.perfil().then(function(data) {
+
+           $scope.perfil = data[0]
+        
+    })
+
+  }
+
+  $scope.salir = function () {
+
+      UserService.salir()
+      $location.path('/home')
+
+    }
+
 
   $scope.dist=true
 
