@@ -328,7 +328,7 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider,$htt
 		$urlRouterProvider.otherwise('/home');
 
 
-	host = 'http://192.168.1.40:8000/'
+	host = 'http://soytodatuya.tk:8000/'
 
 
 	$locationProvider.html5Mode(true);
